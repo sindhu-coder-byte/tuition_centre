@@ -1,0 +1,135 @@
+.card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  padding: 36px;
+}
+
+.readout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.readoutBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 90px;
+}
+
+.readoutLabel {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.readoutValue {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.readoutValueAccent {
+  color: var(--color-primary);
+}
+
+.readoutArrow {
+  font-size: 22px;
+  color: var(--color-text-muted);
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 160px;
+  margin-bottom: 24px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.bar {
+  position: relative;
+  width: 100%;
+  border-radius: 8px 8px 3px 3px;
+  background: var(--color-border);
+  margin-top: auto;
+  cursor: pointer;
+  transition: background 0.3s ease, filter 0.15s ease;
+}
+
+.bar:hover {
+  filter: brightness(1.1);
+}
+
+.bar::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--color-heading);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 5;
+}
+
+.bar:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.barActive {
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-primary) 100%);
+}
+
+.barLabel {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 24px 18px;
+  }
+
+  .readout {
+    gap: 14px;
+  }
+
+  .readoutValue {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,230 @@
+.section {
+  padding: 0 0 96px;
+}
+
+.card {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.intro {
+  position: sticky;
+  top: 100px;
+}
+
+.introPhoto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pickerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pickerLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.dayRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dayBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 66px;
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.dayBtn:hover {
+  border-color: var(--color-primary);
+}
+
+.dayBtnActive {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+.dayBtnActive .dayWeekday,
+.dayBtnActive .dayNum,
+.dayBtnActive .dayMonth {
+  color: #fff;
+}
+
+.dayWeekday {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.dayNum {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.dayMonth {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.slotRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slotBtn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.slotBtn:hover {
+  border-color: var(--color-primary);
+}
+
+.slotBtnActive {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.contactRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 160px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 13px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.confirmWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.confirmCard {
+  max-width: 460px;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 48px 36px;
+}
+
+.confirmIcon {
+  font-size: 44px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.confirmCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.confirmCard p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 860px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  .contactRow {
+    flex-direction: column;
+  }
+}
