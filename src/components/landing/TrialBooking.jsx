@@ -77,7 +77,7 @@ export default function TrialBooking() {
             <div className={styles.intro}>
               <img
                 src={sectionPhotos.trial}
-                alt="Students celebrating achievements after a Zenith demo class"
+                alt="Students celebrating achievements after a demo class at Vidhyashram"
                 className={styles.introPhoto}
               />
               <span className={styles.eyebrow}>Free Trial Class</span>

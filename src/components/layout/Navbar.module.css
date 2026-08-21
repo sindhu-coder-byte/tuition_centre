@@ -24,27 +24,94 @@
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brandMark {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(155deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
   color: var(--color-heading);
+}
+
+.brandSuffix {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .links a {
+  position: relative;
   color: var(--color-text);
+  padding-bottom: 4px;
   transition: color 0.15s ease;
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transition: width 0.2s ease, left 0.2s ease;
 }
 
 .links a:hover {
   color: var(--color-primary);
+}
+
+.links a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.linkActive {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.linkActive::after {
+  left: 0;
+  width: 100%;
 }
 
 .mobileActions {
@@ -55,6 +122,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .menuToggle {
@@ -74,7 +142,7 @@
   border-radius: 2px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1120px) {
   .actions {
     display: none;
   }

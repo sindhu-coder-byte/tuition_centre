@@ -1,5 +1,5 @@
-const BOOKINGS_KEY = 'zenith_trial_bookings'
-const INQUIRIES_KEY = 'zenith_inquiries'
+const BOOKINGS_KEY = 'vidhyashram_trial_bookings'
+const INQUIRIES_KEY = 'vidhyashram_inquiries'
 
 function readList(key) {
   try {

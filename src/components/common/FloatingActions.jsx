@@ -17,7 +17,7 @@ export default function FloatingActions({ onOpenInquiry }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const whatsappHref = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent('Hi! I\'d like to know more about Zenith Tuition Centre.')}`
+  const whatsappHref = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent('Hi! I\'d like to know more about Vidhyashram Tuition Centre.')}`
 
   return (
     <>

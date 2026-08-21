@@ -53,22 +53,12 @@
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(180px, auto);
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .cardWrap {
   display: flex;
-}
-
-.large {
-  grid-column: span 2;
-}
-
-.tall {
-  grid-row: span 2;
 }
 
 .card {
@@ -91,34 +81,6 @@
   box-shadow: var(--shadow-md);
 }
 
-.large .card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(75, 46, 131, 0.14) 1px, transparent 1px);
-  background-size: 16px 16px;
-  mask-image: radial-gradient(circle at 25% 15%, black 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.cardHeader,
-.dashboardPreview,
-.facultyList,
-.seatGrid,
-.seatCaption,
-.resultRing {
-  position: relative;
-  z-index: 1;
-}
-
-.cardHeader {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 22px;
-}
-
 .iconBadge {
   flex-shrink: 0;
   width: 44px;
@@ -130,6 +92,7 @@
   font-size: 20px;
   background: var(--color-primary-light);
   border: 1px solid var(--color-border);
+  margin-bottom: 18px;
 }
 
 .iconBadgeAccent {
@@ -144,7 +107,7 @@
   font-size: 17px;
   font-weight: 600;
   color: var(--color-heading);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .cardText {
@@ -153,230 +116,14 @@
   line-height: 1.5;
 }
 
-/* Card 1 — dashboard preview */
-
-.dashboardPreview {
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
-  flex: 1;
-}
-
-.miniChart {
-  flex: 1;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.miniChartLabel {
-  font-size: 11px;
-  color: var(--color-text-muted);
-  margin-bottom: 10px;
-}
-
-.miniBars {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  flex: 1;
-}
-
-.miniBars span {
-  flex: 1;
-  border-radius: 4px 4px 1px 1px;
-  background: linear-gradient(180deg, #e8c25f 0%, #8a5cd6 100%);
-  min-height: 8%;
-}
-
-.miniBarTip {
-  position: relative;
-  cursor: pointer;
-  transition: filter 0.15s ease;
-}
-
-.miniBarTip:hover {
-  filter: brightness(1.15);
-}
-
-.miniBarTip::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: #14131c;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 5px 9px;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 5;
-}
-
-.miniBarTip:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.dashboardSide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  width: 150px;
-}
-
-.upcomingChip {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  color: var(--color-text);
-  background: var(--color-primary-light);
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  padding: 8px 12px;
-  white-space: nowrap;
-}
-
-.upcomingDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #4ade80;
-  flex-shrink: 0;
-}
-
-/* Card 2 — faculty */
-
-.facultyList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-  justify-content: space-evenly;
-}
-
-.facultyRow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.facultyInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 0;
-}
-
-.facultyName {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-heading);
-}
-
-.facultyPill {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 10px;
-  font-weight: 600;
-  color: #e8c25f;
-  background: rgba(232, 194, 95, 0.14);
-  padding: 3px 8px;
-  border-radius: 999px;
-}
-
-.facultyYears {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
-/* Card 3 — batch size */
-
-.seatGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.seat {
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 1.5px dashed var(--color-border);
-  transition: transform 0.15s ease;
-}
-
-.seatFilled {
-  border-style: solid;
-  border-color: transparent;
-  background: linear-gradient(155deg, #e8c25f 0%, #8a5cd6 100%);
-}
-
-.card:hover .seat {
-  transform: scale(1.08);
-}
-
-.seatCaption {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  margin-top: auto;
-}
-
-/* Card 4 — proven results */
-
-.resultRing {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (max-width: 860px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .large {
-    grid-column: span 2;
-  }
-
-  .tall {
-    grid-row: span 1;
   }
 }
 
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .large,
-  .tall {
-    grid-column: span 1;
-  }
-
-  .dashboardPreview {
-    flex-direction: column;
-  }
-
-  .dashboardSide {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
   }
 }

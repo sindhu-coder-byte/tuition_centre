@@ -18,19 +18,20 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <GlowBadge icon={<FiZap aria-hidden="true" />} tone="accent" className={styles.eyebrow}>
-            Premium coaching, personal attention
+            Coaching Excellence Since 2014
           </GlowBadge>
           <h1 className={styles.title}>
             Where Ambitious Students Become <span className="gradient-text">Top Performers</span>
           </h1>
           <p className={styles.subtitle}>
-            Zenith Tuition Centre pairs expert educators with small batch sizes
-            and personalised progress tracking — for every subject, every grade, every goal.
+            After-school tuition for Grades 8–12 — Math, Science, English, and Computer Science,
+            taught in small batches by expert educators with structured tests and doubt support.
           </p>
           <div className={styles.ctas}>
             <Button to="/signup" variant="accent" glow>Enroll Now</Button>
             <Button href="#courses" variant="secondary">Explore Courses</Button>
           </div>
+          <a href="#trial" className={styles.trialLink}>Not sure yet? Book a free 30-minute trial class →</a>
 
           <dl className={`${styles.stats} bg-dotgrid`}>
             {stats.map((stat) => (
@@ -52,7 +53,7 @@ export default function Hero() {
             <div className={styles.glowBlob} aria-hidden="true" />
             <img
               src={heroImage}
-              alt="Happy students learning together, with progress-tracking and achievement highlights from Zenith Tuition Centre"
+              alt="Happy students learning together, with progress-tracking and achievement highlights from Vidhyashram Tuition Centre"
               className={styles.heroImage}
             />
           </div>

@@ -8,4 +8,6 @@ export const DASHBOARD_PATH = {
   [ROLES.STUDENT]: '/student/dashboard',
 }
 
-export const SITE_NAME = 'Zenith Tuition Centre'
+export const SITE_NAME_MAIN = 'Vidhyashram'
+export const SITE_NAME_SUFFIX = 'Tuition Centre'
+export const SITE_NAME = `${SITE_NAME_MAIN} ${SITE_NAME_SUFFIX}`

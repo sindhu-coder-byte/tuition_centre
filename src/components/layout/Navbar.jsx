@@ -1,30 +1,61 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { SITE_NAME } from '../../utils/constants'
+import { SITE_NAME_MAIN, SITE_NAME_SUFFIX } from '../../utils/constants'
 import Button from '../common/Button'
 import styles from './Navbar.module.css'
 
 const LINKS = [
   { label: 'Courses', href: '#courses' },
   { label: 'About', href: '#about' },
+  { label: 'Facilities', href: '#facilities' },
   { label: 'Mentors', href: '#mentors' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Achievements', href: '#achievements' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [activeHref, setActiveHref] = useState(null)
+
+  useEffect(() => {
+    const sections = LINKS.map((link) => document.querySelector(link.href)).filter(Boolean)
+    if (!sections.length) return undefined
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveHref(`#${entry.target.id}`)
+          }
+        })
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: 0 },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <header className={styles.header}>
       <div className={styles.bar}>
         <Link to="/" className={styles.brand}>
-          {SITE_NAME}
+          <span className={styles.brandMark}>{SITE_NAME_MAIN.charAt(0)}</span>
+          <span className={styles.brandText}>
+            <span className={styles.brandName}>{SITE_NAME_MAIN}</span>
+            <span className={styles.brandSuffix}>{SITE_NAME_SUFFIX}</span>
+          </span>
         </Link>
 
         <nav className={`${styles.links} ${open ? styles.linksOpen : ''}`}>
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={link.href === activeHref ? styles.linkActive : undefined}
+              onClick={() => setOpen(false)}
+            >
               {link.label}
             </a>
           ))}

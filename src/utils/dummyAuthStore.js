@@ -1,5 +1,5 @@
-const USERS_KEY = 'zenith_users'
-const SESSION_KEY = 'zenith_session_uid'
+const USERS_KEY = 'vidhyashram_users'
+const SESSION_KEY = 'vidhyashram_session_uid'
 
 function getUsers() {
   try {

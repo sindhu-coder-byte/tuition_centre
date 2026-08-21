@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FiChevronDown } from 'react-icons/fi'
+import { FiChevronDown, FiAward } from 'react-icons/fi'
 import SectionHeading from '../common/SectionHeading'
 import InitialsAvatar from '../common/InitialsAvatar'
 import Reveal from '../common/Reveal'
@@ -16,7 +16,7 @@ export default function Mentors() {
         <SectionHeading
           eyebrow="Our Faculty"
           title="Learn From Experienced Mentors"
-          description="Every mentor at Zenith brings years of classroom and exam-coaching experience, hand-picked for subject mastery and the ability to teach it well."
+          description="Every mentor at Vidhyashram brings years of classroom and exam-coaching experience, hand-picked for subject mastery and the ability to teach it well."
           center
         />
         <div className={styles.grid}>
@@ -36,7 +36,10 @@ export default function Mentors() {
                   )}
                   <h3 className={styles.name}>{mentor.name}</h3>
                   <span className={styles.subject}>{mentor.subject}</span>
-                  <span className={styles.experience}>{mentor.experience}</span>
+                  <span className={styles.experience}>
+                    <FiAward aria-hidden="true" />
+                    {mentor.experience}
+                  </span>
                   <p className={styles.bio}>{mentor.bio}</p>
 
                   <AnimatePresence initial={false}>

@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom'
 import { offer } from '../../data/siteContent'
 import styles from './OfferPopup.module.css'
 
-const DISMISS_KEY = 'zenith_offer_dismissed'
+const DISMISS_KEY = 'vidhyashram_offer_dismissed'
 
 export default function OfferPopup() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
     if (sessionStorage.getItem(DISMISS_KEY)) return
-    const timer = setTimeout(() => setOpen(true), 1400)
+    const timer = setTimeout(() => setOpen(true), 8000)
     return () => clearTimeout(timer)
   }, [])
 

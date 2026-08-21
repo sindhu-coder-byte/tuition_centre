@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { FiDownload, FiFileText } from 'react-icons/fi'
 import SectionHeading from '../common/SectionHeading'
 import Button from '../common/Button'
 import Reveal from '../common/Reveal'
 import { contactInfo } from '../../data/siteContent'
 import { saveInquiry } from '../../utils/dummyLeadStore'
+import { downloadBrochure } from '../../utils/brochure'
 import styles from './Contact.module.css'
 
 export default function Contact() {
@@ -19,6 +21,30 @@ export default function Contact() {
   return (
     <section id="contact" className={`section ${styles.section}`}>
       <div className="container">
+        <Reveal>
+          <div className={styles.brochureCard}>
+            <div className={`${styles.brochureVisual} bg-dotgrid`} aria-hidden="true">
+              <span className={styles.brochurePageBack} />
+              <span className={styles.brochurePageMid} />
+              <div className={styles.brochurePageFront}>
+                <FiFileText className={styles.brochureIcon} />
+              </div>
+            </div>
+            <div className={styles.brochureBody}>
+              <span className={styles.brochureEyebrow}>Free Download</span>
+              <h3 className={styles.brochureTitle}>Get the Full Institute Brochure</h3>
+              <p className={styles.brochureText}>
+                Courses and fees, class formats, facilities, activities, faculty, and contact details —
+                everything about our campus in one document you can save or share.
+              </p>
+              <button className={styles.brochureBtn} onClick={downloadBrochure}>
+                <FiDownload aria-hidden="true" />
+                Download Institute Brochure
+              </button>
+            </div>
+          </div>
+        </Reveal>
+
         <div className={styles.layout}>
           <Reveal>
             <div>
