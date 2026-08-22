@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 9px 18px;
@@ -15,7 +15,7 @@
 
 .icon {
   display: inline-flex;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .accent {

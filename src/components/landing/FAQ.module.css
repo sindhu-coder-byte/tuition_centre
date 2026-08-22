@@ -48,7 +48,7 @@
 .answer {
   overflow: hidden;
   padding: 0 22px 20px;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-muted);
   line-height: 1.6;
 }

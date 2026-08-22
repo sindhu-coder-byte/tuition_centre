@@ -8,7 +8,7 @@
 }
 
 .boardsLabel {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text-muted);
 }
@@ -22,7 +22,7 @@
   border: 1px solid var(--color-border);
   background: var(--color-primary-light);
   color: var(--color-primary);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -61,14 +61,14 @@
 
 .formatTitle {
   display: block;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 4px;
 }
 
 .formatText {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-muted);
   line-height: 1.4;
 }
@@ -87,7 +87,7 @@
   border: 1px solid var(--color-border);
   background: var(--color-bg);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;
@@ -148,7 +148,7 @@
   border-radius: 999px;
   background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -156,7 +156,7 @@
 }
 
 .popularBadge svg {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .card:hover {
@@ -183,7 +183,7 @@
   border-radius: 50%;
   background: var(--color-primary-light);
   color: var(--color-primary);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -191,7 +191,7 @@
 }
 
 .fees {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--color-accent-dark);
 }
@@ -225,7 +225,7 @@
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-heading);
   cursor: pointer;
@@ -259,7 +259,7 @@
 }
 
 .modalMeta {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-muted);
   margin-bottom: 16px;
 }
@@ -277,7 +277,7 @@
   padding: 10px 14px;
   background: var(--color-bg);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 @media (max-width: 860px) {

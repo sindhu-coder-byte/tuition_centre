@@ -64,11 +64,11 @@
 .name {
   font-weight: 600;
   color: var(--color-heading);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .role {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-muted);
 }
 
@@ -88,7 +88,7 @@
 
 .quote {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--color-text);
   flex: 1;
@@ -96,7 +96,7 @@
 
 .chip {
   align-self: flex-start;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-primary);
   background: var(--color-primary-light);

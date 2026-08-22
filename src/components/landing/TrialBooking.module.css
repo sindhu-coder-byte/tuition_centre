@@ -32,7 +32,7 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-heading);
 }
@@ -109,7 +109,7 @@
 }
 
 .dayWeekday {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--color-text-muted);
 }
 
@@ -121,7 +121,7 @@
 }
 
 .dayMonth {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--color-text-muted);
 }
 
@@ -137,7 +137,7 @@
   border: 1px solid var(--color-border);
   background: var(--color-bg);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;

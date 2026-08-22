@@ -53,7 +53,7 @@ export default function Hero() {
             <div className={styles.glowBlob} aria-hidden="true" />
             <img
               src={heroImage}
-              alt="A Vidhyashram classroom of students learning together"
+              alt="Vidhyashram students in a focused study session"
               className={styles.heroImage}
             />
           </div>

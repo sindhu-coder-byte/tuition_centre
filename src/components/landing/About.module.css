@@ -29,7 +29,7 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -111,7 +111,7 @@
 }
 
 .cardText {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-muted);
   line-height: 1.5;
 }
