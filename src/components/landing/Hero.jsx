@@ -4,7 +4,7 @@ import Button from '../common/Button'
 import CountUp from '../common/CountUp'
 import GlowBadge from '../common/GlowBadge'
 import { stats } from '../../data/siteContent'
-import heroImage from '../../assets/hero-image.jpg'
+import heroImage from '../../assets/hero-classroom.jpg'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -53,7 +53,7 @@ export default function Hero() {
             <div className={styles.glowBlob} aria-hidden="true" />
             <img
               src={heroImage}
-              alt="Happy students learning together, with progress-tracking and achievement highlights from Vidhyashram Tuition Centre"
+              alt="A Vidhyashram classroom of students learning together"
               className={styles.heroImage}
             />
           </div>

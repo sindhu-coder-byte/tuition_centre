@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { SITE_NAME_MAIN, SITE_NAME_SUFFIX } from '../../utils/constants'
 import Button from '../common/Button'
 import styles from './Navbar.module.css'
+import logo from '../../assets/logo.png'
 
 const LINKS = [
   { label: 'Courses', href: '#courses' },
@@ -41,7 +42,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles.bar}>
         <Link to="/" className={styles.brand}>
-          <span className={styles.brandMark}>{SITE_NAME_MAIN.charAt(0)}</span>
+          <img src={logo} alt="" className={styles.brandMark} />
           <span className={styles.brandText}>
             <span className={styles.brandName}>{SITE_NAME_MAIN}</span>
             <span className={styles.brandSuffix}>{SITE_NAME_SUFFIX}</span>

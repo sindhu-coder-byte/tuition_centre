@@ -4,6 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { SITE_NAME, SITE_NAME_MAIN, SITE_NAME_SUFFIX } from '../../utils/constants'
 import { contactInfo } from '../../data/siteContent'
 import styles from './Footer.module.css'
+import logo from '../../assets/logo.png'
 
 const LINK_GROUPS = [
   {
@@ -36,7 +37,7 @@ export default function Footer() {
       <div className={`container ${styles.top}`}>
         <div className={styles.brandCol}>
           <span className={styles.brand}>
-            <span className={styles.brandMark}>{SITE_NAME_MAIN.charAt(0)}</span>
+            <img src={logo} alt="" className={styles.brandMark} />
             <span className={styles.brandText}>
               <span className={styles.brandName}>{SITE_NAME_MAIN}</span>
               <span className={styles.brandSuffix}>{SITE_NAME_SUFFIX}</span>

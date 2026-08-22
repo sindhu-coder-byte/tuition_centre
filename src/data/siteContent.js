@@ -1,7 +1,13 @@
-import trialPhoto from '../assets/image1.jpg'
+import trialPhoto from '../assets/trial-celebration.jpg'
+import facilitySmartClassroom from '../assets/facility-smart-classroom.jpg'
+import facilityLibrary from '../assets/facility-library.jpg'
+import facilityComputerLab from '../assets/facility-computer-lab.jpg'
+import facilityStudyZone from '../assets/facility-study-zone.jpg'
+import facilityAcClassroom from '../assets/facility-ac-classroom.jpg'
+import facilityTransport from '../assets/facility-transport.jpg'
 
-function unsplashFace(id) {
-  return `https://images.unsplash.com/photo-${id}?w=240&h=240&fit=crop&crop=faces&q=80`
+function unsplashFace(url) {
+  return `${url}?w=240&h=240&fit=crop&crop=faces&q=80`
 }
 
 export const boardsCovered = ['CBSE', 'ICSE', 'State Board']
@@ -115,32 +121,32 @@ export const whyChooseUs = [
 
 export const facilities = [
   {
-    icon: 'monitor',
+    image: facilitySmartClassroom,
     title: 'Smart Classrooms',
     description: 'Digital boards and projector-led lessons that make every concept easier to visualise.',
   },
   {
-    icon: 'book',
+    image: facilityLibrary,
     title: 'Library & Reading Room',
     description: 'A quiet, well-stocked space with reference books, past papers, and journals for self-study.',
   },
   {
-    icon: 'science',
+    image: facilityComputerLab,
     title: 'Science & Computer Lab',
     description: 'Hands-on lab sessions and a dedicated computer lab for practical, syllabus-aligned learning.',
   },
   {
-    icon: 'wifi',
+    image: facilityStudyZone,
     title: 'Free Wi-Fi Study Zone',
     description: 'A comfortable common area with free Wi-Fi for group study and project work between classes.',
   },
   {
-    icon: 'seat',
+    image: facilityAcClassroom,
     title: 'Air-Conditioned Classrooms',
     description: 'Comfortable, well-lit, air-conditioned rooms designed for focused, distraction-free learning.',
   },
   {
-    icon: 'bus',
+    image: facilityTransport,
     title: 'Transport & Parking',
     description: 'Convenient parking for drop-offs and pick-ups, with local transport routes nearby.',
   },
@@ -227,7 +233,7 @@ export const mentors = [
     experience: '14 years experience',
     bio: 'Specialises in making mechanics and electromagnetism click for board and competitive exams.',
     fullBio: 'Sunita has coached over 1,200 students through board and entrance exams, with a focus on building physical intuition before formulas. She runs weekly doubt-clearing labs alongside regular classes.',
-    photo: unsplashFace('1494790108377-be9c29b29330'),
+    photo: unsplashFace('https://images.unsplash.com/photo-1659355894748-0b7b60de60b6'),
   },
   {
     name: 'Rahul Kapoor',
@@ -235,7 +241,7 @@ export const mentors = [
     experience: '11 years experience',
     bio: 'Known for breaking calculus and algebra into clear, confidence-building steps.',
     fullBio: 'Rahul previously taught at a national olympiad training camp and now focuses on making core mathematics approachable for every student, not just the naturally strong ones.',
-    photo: unsplashFace('1507003211169-0a1dd7228f2d'),
+    photo: unsplashFace('https://images.unsplash.com/photo-1778692258270-bc0e80e975c0'),
   },
   {
     name: 'Ayesha Khan',
@@ -243,7 +249,7 @@ export const mentors = [
     experience: '9 years experience',
     bio: 'Blends lab-based demonstrations with exam strategy for lasting understanding.',
     fullBio: 'Ayesha holds a Master\'s in Organic Chemistry and designs every lesson around a live demonstration or visual model before moving to exam technique.',
-    photo: unsplashFace('1573497019940-1c28c88b4f3e'),
+    photo: unsplashFace('https://images.unsplash.com/photo-1656236607879-cd489955e17b'),
   },
   {
     name: 'Vikram Singh',
@@ -251,7 +257,7 @@ export const mentors = [
     experience: '8 years experience',
     bio: 'Guides students from first line of code to exam-ready programming skills.',
     fullBio: 'A former software engineer, Vikram teaches programming the way it\'s used in the real world, then maps it back to exactly what the syllabus expects.',
-    photo: unsplashFace('1560250097-0b93528c311a'),
+    photo: unsplashFace('https://images.unsplash.com/photo-1649433658557-54cf58577c68'),
   },
 ]
 
